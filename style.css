@@ -1,0 +1,77 @@
+/* 
+?Flexbox
+*module dividing our wireframe
+*divides wireframes into parent & child containers
+*uses custom properties and values
+*it uses the patter of parents controlling children
+
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: whitesmoke;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.parent-container{
+    background-color: #6a89cc;
+    padding-left: 1em;
+    padding-right: 1em;
+    /* enables flex conainer powers */
+    display: flex;
+    /* defines main and cross axes */
+    flex-direction: row;
+    /* enables break into next line when resizing */
+    flex-wrap: wrap;
+    /* Aligns along the main axis */
+    justify-content: space-between;
+}
+
+.menu-items {
+    /* flex-direction: column; */
+    display: flex;
+    /* aligns along cross axis */
+    align-items: center;
+    /* controls space between children */
+    gap: 1em;
+}
+
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    margin: .125em;
+}
+
+/* allows access to elements through its node position */
+.nav-link:nth-child(1) {
+    /* modifies the default order */
+    order: 2;
+}
+
+.nav-link:nth-child(2) {
+    /* modifies the default order */
+    order: 1;
+}
+
+.nav-link:nth-child(3) {
+    /* modifies the default order */
+    order: 4;
+}
+
+.nav-link:nth-child(4) {
+    /* modifies the default order */
+    order: 3;
+}
+
+
+#logo {
+    width:4.5em;
+    object-fit: cover;
+    /* padding-right: 5em;
+    padding-left: 1em; */
+}
